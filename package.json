@@ -6,6 +6,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
+  "scripts": {
+    "start": "vite"
+  },
   "devDependencies": {
     "@types/node": "^16.11.47",
     "@types/react": "^17.0.48",

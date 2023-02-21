@@ -11,10 +11,19 @@ function sleep(ms: number) {
   return new Promise((res) => setTimeout(res, ms));
 }
 
+/**
+ * API that provides a series of logs asynchronously. You can treat the function implementation as a
+ * black box and assume it's a thin wrapper around a REST API.
+ *
+ * @param start Minimum Unix time to include logs from, in seconds
+ * @param end Unix time after which to not include logs (exclusive bound), in seconds
+ * @param level The minimum level of logs to include. E.g. if `level` is `LogLevel.Warning`, both Warning
+ * and Error logs will be returned
+ * @returns An array of log lines
+ */
 export default async function fetchLogs(
   start: number,
   end: number,
-  query?: string,
   level: LogLevel = LogLevel.Debug
 ): Promise<LogLine[]> {
   const logs: LogLine[] = [];
