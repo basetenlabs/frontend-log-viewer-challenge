@@ -5,9 +5,10 @@ Your job is to implement a React web app that allows the user to view a stream o
 ## Basic requirements
 
 - Time range: Last 5 minutes, last hour, last 24 hours, last 7 days
-- Level filter
 - Implement tailing, showing new logs as they come in, just like a terminal
 - For each log line, show the timestamp and log message
+
+To help get you started, we have provided a very simple `<TimePicker/>` component you may use to switch between time ranges.
 
 ## Other notes
 

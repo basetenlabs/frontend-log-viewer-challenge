@@ -1,5 +1,6 @@
 ## Follow-on requirements
 
+- How to differentiate logs with different levels?
 - Some logs come from a particular replica. How would you allow the user to both:
   - View logs from one replica
   - View logs from all replicas at one and see which log came from which replica
