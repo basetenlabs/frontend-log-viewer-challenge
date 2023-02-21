@@ -1,13 +1,17 @@
+import { useState } from "react";
 import "./App.css";
+import TimePicker from "./Components/TimePicker";
+import { TimeRange } from "./types";
 
 function App() {
+  const [range, setRange] = useState<TimeRange>(TimeRange.Last5Minutes);
+
   return (
     <div className="app">
-      <div className="content">
-        <img src="https://storage.googleapis.com/coderpad_project_template_assets/react.svg" />
-        <p>Hello React!</p>
+      <div className="time-range-container">
+        <TimePicker value={range} onChange={setRange} />
       </div>
-      <div className="footer">Use the Shell to install new packages.</div>
+      {/* Insert your log viewer implementation here */}
     </div>
   );
 }

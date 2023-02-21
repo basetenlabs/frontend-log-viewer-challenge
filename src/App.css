@@ -3,28 +3,12 @@
   background: #f0f2f4;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  justify-content: flex-start;
+  height: 100vh;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  padding-top: 2rem;
-}
-
-.content > img {
-  height: 45vh;
-}
-
-.content > p {
-  font-size: 2rem;
-}
-
-.footer {
-  margin-bottom: 10vh;
-  text-align: center;
+.time-range-container {
+  display: inline-block;
+  align-self: flex-end;
+  padding: 4px;
 }

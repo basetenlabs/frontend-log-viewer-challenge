@@ -31,7 +31,7 @@ export default async function fetchLogs(
 
   const nowTs = Math.floor(new Date().getTime() / 1000);
 
-  for (let ts = start; ts < Math.min(end, nowTs); ts++) {
+  for (let ts = Math.floor(start); ts < Math.min(end, nowTs); ts++) {
     if (ts % 5 == 0) {
       if (levelIdx == 0) {
         // Debug
@@ -142,8 +142,6 @@ export default async function fetchLogs(
         replica: "replica-1",
       });
     }
-
-    await sleep(1);
   }
 
   await sleep(100);
