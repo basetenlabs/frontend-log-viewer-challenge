@@ -6,8 +6,16 @@ export enum LogLevel {
 }
 
 export interface LogLine {
+  /**
+   * Timestamp of the log, in seconds since the UNIX epoch
+   */
   ts: number;
-  level: LogLevel;
+  /**
+   * Message being logged
+   */
   msg: string;
-  replica: string;
+  /**
+   * Level of the log
+   */
+  level: LogLevel;
 }
